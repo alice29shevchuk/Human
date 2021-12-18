@@ -49,7 +49,16 @@ int main()
             std::cin >> homework;
             School school(name, age, homework);
             std::cout << "\n";
-            school.Print();
+            if (_stricmp(homework, "y")==0)
+            {
+                school.Print();
+                std::cout << "задано!\n";
+            }
+            else
+            {
+                school.Print();
+                std::cout << "не задано!\n";
+            }
             system("pause");
             system("cls");
             break;
