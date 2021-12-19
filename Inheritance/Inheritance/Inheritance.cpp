@@ -21,6 +21,7 @@ int main()
         std::cout << "1 - Студент\n";
         std::cout << "2 - Школьник\n";
         std::cout << "3 - Работник\n";
+        std::cout << "4 - Изменить данные о человеке\n";
         std::cout << "0 - Выход\n";
         std::cout << "\nВаш выбор: ";
         std::cin >> ch;
@@ -77,6 +78,16 @@ int main()
             system("cls");
             break;
         }
+        case 4:
+            system("cls");
+            std::cout << "Введите имя: ";
+            std::cin.ignore();
+            std::cin.getline(name, 100);
+            human.SetName(name);
+            std::cout << "Введите возраст: ";
+            std::cin >> age;
+            human.SetAge(age);
+            break;
         }
     } while (ch != 0);
     std::cout << "Вы вышли!";
